@@ -62,7 +62,7 @@ header .nav-primary a:hover {
 
 img {
   width: 100%;
-  max-width: 600px;
+  max-width: 900px;
   height: auto;
   border-radius: 15px;
   object-fit: cover;
@@ -153,7 +153,8 @@ main .sobre_titulo h2 {
   font-size: 4rem;
   font-family: "Rubik Glitch", system-ui;
   color: #0fad85;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  font-weight: 200;
 }
 
 main .sobre_titulo p {
@@ -186,26 +187,28 @@ main .sobre_titulo p::before {
 
 .buttons-ilustration span {
   background-color: #0fad85;
-  height: 12px;
-  width: 12px;
+  height: 20px;
+  width: 20px;
   display: block;
-  border-radius: 50%;
+  border-radius: 30%;
   transition: background-color 0.3s ease;
 }
 
 .buttons-ilustration span:hover {
   background-color: #fff;
+  cursor: pointer;
 }
 
 main .sobre_imagem img {
   box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
-  filter: drop-shadow(0px 0px 0px transparent) blur(0px) brightness(1.0); 
-  transition: all 0.4s ease;
+  filter: drop-shadow(0px 0px 0px transparent) blur(3px) brightness(1.0); 
+  transition: .7s ease-in-out;
+  justify-content: flex-end;
 }
 
 main .sobre_imagem img:hover {
-  filter: drop-shadow(2px 2px 15px rgba(15, 173, 133, 0.4)) brightness(1.1);
-  transform: translateY(-5px);
+  filter: drop-shadow(2px 2px 15px rgba(15, 173, 133, 0.4)) brightness(1.1) blur(0px);
+  transform: translateY(5px);
 }
 
 main .sobre_conteudo {
