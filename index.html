@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
         <h1>Dev <span>Portfolio</span></h1>
@@ -15,19 +17,57 @@
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#portfolio">Portfólio</a></li>                
                 <li><a href="#contact">Contato</a></li>
-
             </ul>
         </nav>
     </header>
-    <section aria-label="home" class="section-div">
-        <div>
-        <h2>Bem-vindo ao meu portfólio</h2>
-        <h2 class="digitando">Front end/ Back end developer</h2>
-        <p>sakljgnakjgjkadakmlakfmlka alkgmalkgdm alkmgalkdsmalks aglkdmakl</p>
-        <a href="#download" class="download-cv">Download CV</a>
+
+    <section id="home" aria-label="home" class="section-div">
+        <div class="home-text">
+            <h2>Bem-vindo ao meu portfólio</h2>
+            <h2 class="digitando">Front end & Back end developer</h2>
+            <p>Transformando ideias em interfaces incríveis e sistemas robustos. Focado em criar a melhor experiência para o usuário.</p>
+            <a href="#download" class="download-cv">Download CV</a>
         </div>
-        <img src="img/hero.png" alt="Imagem de um desenvolvedor">
+        <div class="home-img">
+            <img src="img/about.png" alt="Imagem de um desenvolvedor">
+        </div>
     </section>
+
+    <main id="about">
+        <article aria-label="seção sobre mim" class="sobre">
+            
+            <div class="sobre_titulo">
+                <h2>Sobre mim</h2>
+                <p>Perfil profissional. Saiba tudo sobre mim</p>
+                <div aria-label="buttons-ilustration" class="buttons-ilustration">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </div>
+            </div>
+            
+            <div class="sobre_imagem">
+                <img src="img/about.png" alt="Imagem de um desenvolvedor">
+            </div>
+
+            <div class="sobre_conteudo">
+                <div class="sobre_texto">
+                    <h3>Eu sou um desenvolvedor Web</h3>
+                    <p>Sou apaixonado por tecnologia e programação. Crio soluções web completas, do design da interface até a estruturação do banco de dados.</p>
+                </div>
+                
+                <div class="sobre_info">
+                    <p><i class="fas fa-user"></i><span>Nome:</span> Dev da Silva</p>
+                    <p><i class="fas fa-calendar"></i><span>Idade:</span> 25 anos</p>
+                    <p><i class="fas fa-map-marker"></i><span>Endereço:</span> Rua Exemplo, 123</p>
+                    <p><i class="fas fa-envelope"></i><span>Email:</span> dev.silva@email.com</p>
+                    <p><i class="fas fa-phone"></i><span>Telefone:</span> (11) 98765-4321</p>
+                    <p><i class="fas fa-language"></i><span>Línguas:</span> PT, EN, ES</p>
+                </div>
+            </div>
+
+        </article>
+    </main>
 
     <script src="script.js"></script>
 </body>
