@@ -41,6 +41,15 @@ header span {
   color: #fff;
 }
 
+header h1:hover {
+  color:#fff; 
+  span{
+    color:#0fad85;
+  }
+}
+
+
+
 header .nav-primary {
   display: flex;
   gap: 15px;
@@ -55,10 +64,33 @@ header .nav-primary a {
   border-bottom: 2px solid transparent;
 }
 
+
 header .nav-primary a:hover {
   color: #0fad85;
   border-bottom: 2px solid #0fad85;
 }
+
+header .download a{
+ padding: auto auto;
+  background-color: transparent;
+  color: #0fad85;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid #0fad85;
+  width: fit-content;
+  position: relative;
+  left: 50%;
+}
+
+header .download a:hover {
+  background-color: #0fad85;
+  color: #000;
+  box-shadow: 0 0 15px #0fad85;
+
+}
+
 
 img {
   width: 100%;
@@ -307,4 +339,12 @@ main .sobre_conteudo {
   main .sobre_titulo h2 {
     font-size: 3rem;
   }
+
+
+header .download {
+  flex-direction: column;
+  margin-left: 0;
+  position: relative;
+  left: 0%;
+}
 }
