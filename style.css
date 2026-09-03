@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -35,16 +37,20 @@ header h1 {
   color: #0fad85;
   font-size: 2rem;
   font-weight: 700;
+  transition: color 0.5s ease;
 }
 
 header span {
   color: #fff;
+  transition: color 0.5s ease;
 }
 
 header h1:hover {
   color:#fff; 
+    transition: color 0.5s ease;
   span{
     color:#0fad85;
+    transition: color 0.5s ease;
   }
 }
 
@@ -81,7 +87,7 @@ header .download a{
   border: 2px solid #0fad85;
   width: fit-content;
   position: relative;
-  left: 50%;
+  left: 10%;
 }
 
 header .download a:hover {
@@ -98,6 +104,13 @@ img {
   height: auto;
   border-radius: 15px;
   object-fit: cover;
+}
+
+header .fa-solid.fa-bars {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* Hero Section */
@@ -294,28 +307,118 @@ main .sobre_conteudo {
   color: #fff;
 }
 
-/* Animations */
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+
+/* seção services */
+.services {
+  margin-top: -30px;
+  padding: 60px ;
+  background-color:#0e0e0e;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.services .sobre_titulo {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
+.services .sobre_titulo h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: odibee sans, cursive;
+  font-size: 4rem;
+  color: #0fad85;
+  font-weight: 400px;
+  max-width: 100%;
+}
+
+.my_services {
+  padding: 60px;
+  align-items: center;
+}
+
+.my_services ul {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+}
+
+.my_services ul li {
+  cursor: pointer;
+  border-radius: 6px;
+  position:relative;
+  padding: 10px;
+  gap: 30px;
+  text-align: center;
+  max-width: 300px;
+  align-content: center;
+  height: 300px;
+  background-color: #1a1a1a;
+}
+
+.my_services ul li::before {
+  content: '';
+  position: absolute;
+  border-radius: 6px;
+  width: 0px;
+  height: 0px;
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transition: ease-in-out 0.5s;
+}
+
+  .my_services ul li:after {
+  content: '';
+  position: absolute;
+  border-radius: 6px;
+  width: 0px;
+  height: 0px;
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  transition: ease-in-out 0.5s;
+}
+
+  .my_services ul li:hover::before{
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #0fad85;
+    border-right: 2px solid #0fad85;
+    border-radius: 6px;
+    animation: girarBorda 2s linear infinite;
+  }
+
+  .my_services ul li:hover::after{
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #0fad85;
+    border-left: 2px solid #0fad85;
+    border-radius: 6px;
+    animation: girarBorda 2s linear infinite ;
+    background-color: rgba(15, 173, 133, 0.1);
+  }
+
+
+
+
+
+
+
 
 /* Responsividade (Celulares e Tablets) */
 @media (max-width: 900px) {
   header {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    gap: 5px;
   }
   
   .section-div, main .sobre {
@@ -347,4 +450,78 @@ header .download {
   position: relative;
   left: 0%;
 }
+
+header .nav-primary {
+  flex-direction: column;
+  gap: 10px;
+  display: none;
 }
+
+header .fa-solid.fa-bars {
+  display:flex;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 0px;
+  flex-direction: row-reverse;
+}
+
+.my_services {
+  max-width: 100%;
+}
+
+  .my_services ul {
+    display:flex;
+    overflow-x: auto;
+    max-width: 100%;
+    justify-content: flex-start;
+    margin: 60px auto;
+  }
+
+  .my_services ul li {
+    flex: 0 0 200px;
+    margin: 0 10px;
+  }
+}
+
+  /* Animations */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  @keyframes girarBorda {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preencher {
+    0% {
+        transform: scaleY(0);
+    }
+
+    70% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+  }
