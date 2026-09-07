@@ -1,132 +1,708 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<title>Dev Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+
 </head>
 
 <body>
-    <header>
-        <a href="#home"><h1>Dev <span>Portfolio</span></h1></a>
-        <nav>
-            <ul class="nav-primary">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>                
-                <li><a href="#contact">Contato</a></li>
-                <li class="download"><a href="#download" class="download">Download CV</a></li>
-            </ul>
-        </nav>
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
-    </header>
 
-    <section id="home" aria-label="home" class="section-div">
-        <div class="home-text">
-            <h2>Bem-vindo ao meu portfólio</h2>
-            <h2 class="digitando">Front end / Back end developer</h2>
-            <p>Transformando ideias em interfaces incríveis e sistemas robustos. Focado em criar a melhor experiência para o usuário.</p>
-            <a href="#download" class="download-cv">Download CV</a>
-        </div>
-        <div class="home-img">
-            <img src="img/about.png" alt="Imagem de um desenvolvedor">
-        </div>
-    </section>
 
-    <main id="about">
-        <article aria-label="seção sobre mim" class="sobre">
-            
-            <div class="sobre_titulo">
-                <h2>Sobre mim</h2>
-                <p>Perfil profissional. Saiba tudo sobre mim</p>
-                <div aria-label="buttons-ilustration" class="buttons-ilustration">
-                    <span> </span>
-                    <span> </span>
-                    <span> </span>
-                </div>
+<header>
+
+    <a href="#home" class="logo">
+        <h1>Dev <span>Portfolio</span></h1>
+    </a>
+
+    <nav>
+
+        <ul class="nav-primary">
+
+            <li class="item">
+                <a href="#home">Início</a>
+            </li>
+
+            <li class="item">
+                <a href="#about">Sobre</a>
+            </li>
+
+            <li class="item">
+                <a href="#portfolio">Portfólio</a>
+            </li>
+
+            <li class="item">
+                <a href="#contact">Contato</a>
+            </li>
+
+            <li class="download">
+                <a href="#download">Download CV</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+</header>
+
+
+
+<section id="home" class="section-div">
+
+    <div class="home-text">
+
+        <h2>Bem-vindo ao meu portfólio</h2>
+
+        <h2 class="digitando">
+            Front-end / Back-end Developer
+        </h2>
+
+        <p>
+            Transformando ideias em interfaces incríveis e sistemas
+            robustos. Focado em criar a melhor experiência para o usuário.
+        </p>
+
+        <a href="#download" class="download-cv">
+            Download CV
+        </a>
+
+    </div>
+
+
+    <div class="home-img">
+
+        <img
+            src="img/about.jpg"
+            alt="Imagem de um desenvolvedor">
+
+    </div>
+
+</section>
+
+
+
+<main id="about">
+
+    <article class="sobre">
+
+        <div class="sobre_titulo">
+
+            <h2>Sobre mim</h2>
+
+            <p>
+                Conheça um pouco mais sobre minha trajetória
+            </p>
+
+
+            <div
+                aria-label="Opções sobre mim"
+                class="buttons-ilustration">
+
+                <span
+                    class="about-option active"
+                    data-option="perfil"
+                    title="Perfil">
+                </span>
+
+                <span
+                    class="about-option"
+                    data-option="skills"
+                    title="Habilidades">
+                </span>
+
+                <span
+                    class="about-option"
+                    data-option="objetivos"
+                    title="Objetivos">
+                </span>
+
             </div>
-            
-            <div class="sobre_imagem">
-                <img src="img/about.png" alt="Imagem de um desenvolvedor">
+
+        </div>
+
+
+        <div class="sobre_imagem">
+
+            <img
+                id="about-image"
+                src="img/about.jpg"
+                alt="Imagem do desenvolvedor">
+
+        </div>
+
+
+        <div class="sobre_conteudo">
+
+
+            <div class="sobre_texto">
+
+                <h3 id="about-title">
+                    Eu sou um desenvolvedor Web
+                </h3>
+
+                <p id="about-description">
+
+                    Sou apaixonado por tecnologia e programação.
+                    Crio soluções web completas, do design da interface
+                    até a estruturação do banco de dados.
+
+                </p>
+
             </div>
 
-            <div class="sobre_conteudo">
-                <div class="sobre_texto">
-                    <h3>Eu sou um desenvolvedor Web</h3>
-                    <p>Sou apaixonado por tecnologia e programação. Crio soluções web completas, do design da interface até a estruturação do banco de dados.</p>
+
+            <div class="sobre_info" id="about-info">
+
+                <p>
+                    <i class="fas fa-user"></i>
+                    <span>Nome:</span>
+                    Dev da Silva
+                </p>
+
+                <p>
+                    <i class="fas fa-code"></i>
+                    <span>Área:</span>
+                    Desenvolvimento Web
+                </p>
+
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Localização:</span>
+                    Brasil
+                </p>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <span>Email:</span>
+                    dev@email.com
+                </p>
+
+                <p>
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Experiência:</span>
+                    Front-end e Back-end
+                </p>
+
+                <p>
+                    <i class="fas fa-language"></i>
+                    <span>Línguas:</span>
+                    Português e Inglês
+                </p>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</main>
+
+
+
+<section class="services" id="services">
+
+    <div class="sobre_titulo">
+
+        <h2>Serviços</h2>
+
+        <p>
+            Os serviços que posso oferecer
+        </p>
+
+        <div class="buttons-ilustration">
+
+        </div>
+
+    </div>
+
+
+    <div class="my_services">
+
+        <ul>
+
+
+            <li>
+
+                <i class="fa-solid fa-code"></i>
+
+                <h3>
+                    Desenvolvimento Front-end
+                </h3>
+
+                <p>
+                    Criação de interfaces web responsivas e
+                    interativas utilizando tecnologias modernas.
+                </p>
+
+            </li>
+
+
+            <li>
+
+                <i class="fa-solid fa-server"></i>
+
+                <h3>
+                    Desenvolvimento Back-end
+                </h3>
+
+                <p>
+                    Desenvolvimento de sistemas robustos e escaláveis,
+                    utilizando tecnologias modernas e bancos de dados.
+                </p>
+
+            </li>
+
+
+            <li>
+
+                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                <h3>
+                    Desenvolvimento Mobile
+                </h3>
+
+                <p>
+                    Criação de aplicativos móveis modernos e
+                    funcionais para diferentes plataformas.
+                </p>
+
+            </li>
+
+
+            <li>
+
+                <i class="fa-solid fa-paintbrush"></i>
+
+                <h3>
+                    Design UI/UX
+                </h3>
+
+                <p>
+                    Criação de interfaces intuitivas e agradáveis,
+                    com foco na experiência do usuário.
+                </p>
+
+            </li>
+
+
+            <li>
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>
+                    Otimização de Performance
+                </h3>
+
+                <p>
+                    Melhoria do desempenho de aplicações,
+                    proporcionando experiências mais rápidas.
+                </p>
+
+            </li>
+
+
+            <li>
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>
+                    Segurança da Informação
+                </h3>
+
+                <p>
+                    Implementação de boas práticas para proteger
+                    dados e aplicações.
+                </p>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<section id="portfolio" class="portfolio">
+
+    <div class="section-title">
+
+        <span>Meu trabalho</span>
+
+        <h2>Projetos</h2>
+
+        <p>
+            Alguns projetos desenvolvidos durante minha jornada
+            como desenvolvedor.
+        </p>
+
+    </div>
+
+
+    <div class="projects-container">
+
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="img/project1.png"
+                    alt="Projeto To Do List">
+
+            </div>
+
+
+            <div class="project-content">
+
+                <h3>To-Do List</h3>
+
+                <p>
+                    Aplicação para organização de tarefas
+                    com armazenamento local e interface responsiva.
+                </p>
+
+
+                <div class="project-tech">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+
                 </div>
-                
-                <div class="sobre_info">
-                    <p><i class="fas fa-user"></i><span>Nome:</span> Dev da Silva</p>
-                    <p><i class="fas fa-calendar"></i><span>Idade:</span> 25 anos</p>
-                    <p><i class="fas fa-map-marker"></i><span>Endereço:</span> Rua Exemplo, 123</p>
-                    <p><i class="fas fa-envelope"></i><span>Email:</span> dev.silva@email.com</p>
-                    <p><i class="fas fa-phone"></i><span>Telefone:</span> (11) 98765-4321</p>
-                    <p><i class="fas fa-language"></i><span>Línguas:</span> PT, EN, ES</p>
-                </div>
+
+
+                <a href="#">
+
+                    Ver projeto
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
             </div>
 
         </article>
-    </main>
-    <section class="services">
-    
-        <div class="sobre_titulo">
-            <h2>Serviços</h2>
-          <p>Os serviços que posso oferecer</p>
-            <div aria-label="buttons-ilustration" class="buttons-ilustration">
+
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="img/project2.png"
+                    alt="Projeto Web">
+
             </div>
+
+
+            <div class="project-content">
+
+                <h3>Projeto Web</h3>
+
+                <p>
+                    Uma aplicação desenvolvida com foco
+                    em experiência do usuário e design responsivo.
+                </p>
+
+
+                <div class="project-tech">
+
+                    <span>React</span>
+                    <span>JavaScript</span>
+                    <span>CSS</span>
+
+                </div>
+
+
+                <a href="#">
+
+                    Ver projeto
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="img/project3.png"
+                    alt="Projeto Full Stack">
+
+            </div>
+
+
+            <div class="project-content">
+
+                <h3>Projeto Full Stack</h3>
+
+                <p>
+                    Sistema completo utilizando tecnologias
+                    modernas no front-end e no back-end.
+                </p>
+
+
+                <div class="project-tech">
+
+                    <span>Node.js</span>
+                    <span>React</span>
+                    <span>Database</span>
+
+                </div>
+
+
+                <a href="#">
+
+                    Ver projeto
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<section id="contact" class="contact">
+
+
+    <div class="contact-content">
+
+
+        <div class="contact-text">
+
+            <span>Entre em contato</span>
+
+            <h2>
+                Vamos trabalhar juntos?
+            </h2>
+
+            <p>
+                Tem algum projeto, ideia ou oportunidade?
+                Entre em contato comigo e vamos conversar.
+            </p>
+
+
+            <div class="contact-info">
+
+
+                <a href="mailto:dev@email.com">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <div>
+
+                        <span>Email</span>
+
+                        <p>
+                            dev@email.com
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fas fa-phone"></i>
+
+                    <div>
+
+                        <span>Telefone</span>
+
+                        <p>
+                            (00) 00000-0000
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fas fa-location-dot"></i>
+
+                    <div>
+
+                        <span>Localização</span>
+
+                        <p>
+                            Brasil
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
         </div>
-        <div class="my_services">
-            <ul>
-                <li>
-                    <i class="fa-sharp fa-solid fa-pen-to-square"></i>
-                    <h3>Desenvolvimento Front-end</h3>
-                    <p>Criação de interfaces web responsivas e interativas, utilizando HTML, CSS</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-server"></i>
-                    <h3>Desenvolvimento Back-end</h3>
-                    <p>Desenvolvimento de sistemas robustos e escaláveis, utilizando Node.js, Express e bancos de dados relacionais e não relacionais.</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <h3>Desenvolvimento Mobile</h3>
-                    <p>Criação de aplicativos móveis nativos e híbridos, utilizando React Native e Flutter.</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-paintbrush"></i>
-                    <h3>Design UI/UX</h3>
-                    <p>Criação de interfaces intuitivas e agradáveis, com foco na experiência do usuário.</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-chart-line"></i>
-                    <h3>Otimização de Performance</h3>
-                    <p>Melhoria do desempenho de aplicações web, reduzindo o tempo de carregamento e aumentando a eficiência.</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h3>Segurança da Informação</h3>
-                    <p>Implementação de práticas de segurança para proteger dados e aplicações contra ameaças cibernéticas.</p>
-                </li>
-            </ul>
-            
+
+
+        <form class="contact-form">
+
+            <input
+                type="text"
+                placeholder="Seu nome"
+                required>
+
+
+            <input
+                type="email"
+                placeholder="Seu email"
+                required>
+
+
+            <textarea
+                placeholder="Conte um pouco sobre seu projeto..."
+                required>
+            </textarea>
+
+
+            <button type="submit">
+
+                Enviar mensagem
+
+                <i class="fas fa-paper-plane"></i>
+
+            </button>
+
+        </form>
+
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                Dev <span>Portfolio</span>
+            </h2>
+
+
+            <p>
+                Desenvolvendo experiências digitais modernas,
+                funcionais e criativas.
+            </p>
+
+
+            <div class="social-links">
+
+                <a href="#" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+            </div>
+
         </div>
-    </section>
-
-    <footer>
-        <h1>Contato</h1>
-        <ul>
-            <li><i class="fas fa-envelope"></i> dev.silva@email.com</li>
-            <li><i class="fas fa-phone"></i> (11) 98765-4321</li>
-            <li><i class="fas fa-map-marker"></i> Rua Exemplo, 123</li>
-            
-        </ul>
-        <p> 2026 Dev da Silva. Todos os direitos reservados.</p>
-    </footer>
 
 
-    <script src="script.js"></script>
+        <div class="footer-links">
+
+
+            <div>
+
+                <h3>Navegação</h3>
+
+                <a href="#home">Início</a>
+                <a href="#about">Sobre</a>
+                <a href="#portfolio">Projetos</a>
+                <a href="#contact">Contato</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Serviços</h3>
+
+                <a href="#services">Front-end</a>
+                <a href="#services">Back-end</a>
+                <a href="#services">Mobile</a>
+                <a href="#services">UI/UX</a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Dev da Silva. Todos os direitos reservados.
+        </p>
+
+
+        <a href="#home">
+
+            Voltar ao topo
+
+            <i class="fas fa-arrow-up"></i>
+
+        </a>
+
+    </div>
+
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
